@@ -79,7 +79,7 @@ def activate_port(string="COM1"):
 	else:
 		SYNC = write_command(new_command([0, 0]))
 		if SYNC:
-			for button in get_buttons(get_children(PYCLAMP.masframe)):
+			for button in get_buttons(get_children(PYCLAMP.masframe, [])):
 				button.configure(state="normal")
 			SER.reset_output_buffer()
 			SER.reset_input_buffer()
@@ -124,32 +124,32 @@ def get_buttons(children=None):  # see: https://docs.python.org/3/tutorial/contr
 			entries.append(child)
 	return entries
 
-def get_children(widget):
-	""" returns a list children from a widget """
-	children = widget.winfo_children()
-	for child in children:
-		if child.winfo_children():  # recursively
-			children.extend(child.winfo_children())
+def get_children(widget=None, children=None):
+	""" returns a recursive list of children from a widget """
+	widgets = widget.winfo_children()	# buggy
+	for child in widgets:
+		children.append(child)
+		get_children(child, children)	# recursion
 	return children
 
-def get_entries(children=None):
+def get_numentries(children=None):
 	""" returns a list of text entries from a list of children """
 	entries = []
 	for child in children:
-		if child.winfo_name().startswith("!mynumentry"):
+		if str(child.winfo_name()).startswith("!mynumentry"):
 			entries.append(child)
 	return entries
 
 def get_values():
 	""" read parameters and conductances from the corresponding entries """
 	tuples = []
-	lencals = len(get_entries(get_children(PYCLAMP.calframe)))  # number of calibration parameters
-	lencons = len(get_entries(get_children(PYCLAMP.conframe)))  # number of conductance values
-	for index, entry in zip(range(1, lencals+2), get_entries(get_children(PYCLAMP.calframe))):
+	cals = get_numentries(get_children(PYCLAMP.calframe, []))  # calibration parameters
+	cons = get_numentries(get_children(PYCLAMP.conframe, []))  # conductance values
+	for index, entry in zip(range(1, len(cals)+2), cals):
 		entry.var.get()
 		value = float(entry.var.get() or 0.0)
 		tuples.append((-index, value))	# get calibration parameters
-	for index, entry in zip(range(1, lencons+2), get_entries(get_children(PYCLAMP.conframe))):
+	for index, entry in zip(range(1, len(cons)+2), cons):
 		value = float(entry.var.get() or 0.0)
 		tuples.append((index, value))	# get conductance values
 	return tuples
@@ -199,7 +199,7 @@ def prepr(string=""):
 def read_string():
 	""" receives a string from the serial COM port """
 	global SER
-	string = SER.readline().decode()  # avoid timeout
+	string = str(SER.readline(), encoding='utf-8', errors='strict')  # avoid timeout
 	return string
 
 def report():
@@ -220,10 +220,10 @@ def set_values(calibras=None, conducts=None):
 	""" writing parameters and conductances into the corresponding entries """
 	global SYNC
 	if SYNC:
-		for entry, value in zip(get_entries(get_children(PYCLAMP.calframe)), calibras):
+		for entry, value in zip(get_numentries(get_children(PYCLAMP.calframe, [])), calibras):
 			entry.var.set(value)  # set calibration parameters
 			entry.configure(state="normal", background="light green", foreground="black")
-		for entry, value in zip(get_entries(get_children(PYCLAMP.conframe)), conducts):
+		for entry, value in zip(get_numentries(get_children(PYCLAMP.conframe, [])), conducts):
 			entry.var.set(value)  # set conductance values
 			entry.configure(state="normal", background="light green", foreground="black")
 
@@ -286,10 +286,10 @@ def toggle_animation():
 def toggle_buttons():
 	""" toggles the buttons active or inactive depending on text entry validity """
 	valid = True
-	for entry in get_entries(get_children(PYCLAMP.trframe)):
+	for entry in get_numentries(get_children(PYCLAMP.trframe, [])):
 		if entry.cget('background') == 'red':
 			valid = False
-	for button in get_buttons(get_children(PYCLAMP.trframe)):
+	for button in get_buttons(get_children(PYCLAMP.trframe, [])):
 		if valid:
 			button.configure(state='normal')
 		else:
@@ -587,13 +587,13 @@ class PYCLAMP():
 		self.cal2entry = MyNumEntry(self.calframe, state="readonly")
 		self.cal2entry.grid(column=2, row=1, columnspan=5, sticky='new', padx=(5, 0))
 
-		# Calibration 2 label
+		# Calibration 3 label
 		self.cal3label = ttk.Label(self.calframe, text="ADC_m\t[mV/1]")
 		self.cal3label.grid(column=0, row=2, sticky='nw')
 		self.cal3label.bind('<Enter>', lambda s: ROOT.after(0, toggle_tooltip("VALUE: Analog-to-digital converter input slope [mV/1]. Set to 1.0 for calibration.")))
 		self.cal3label.bind('<Leave>', lambda s: ROOT.after(0, toggle_tooltip("")))
 
-		# Calibration 2 text entry
+		# Calibration 3 text entry
 		self.cal3entry = MyNumEntry(self.calframe, state="readonly")
 		self.cal3entry.grid(column=2, row=2, columnspan=5, sticky='new', padx=(5, 0))
 
