@@ -145,11 +145,10 @@ def get_values():
 	tuples = []
 	cals = get_numentries(get_children(PYCLAMP.calframe, []))  # calibration parameters
 	cons = get_numentries(get_children(PYCLAMP.conframe, []))  # conductance values
-	for index, entry in zip(range(1, len(cals)+2), cals):
-		entry.var.get()
+	for index, entry in zip(range(1, len(cals)+1), cals):
 		value = float(entry.var.get() or 0.0)
 		tuples.append((-index, value))	# get calibration parameters
-	for index, entry in zip(range(1, len(cons)+2), cons):
+	for index, entry in zip(range(1, len(cons)+1), cons):
 		value = float(entry.var.get() or 0.0)
 		tuples.append((index, value))	# get conductance values
 	return tuples
