@@ -3,7 +3,7 @@
 
 **[pyClamp](https://github.com/christianrickert/pyClamp)** is a feature-complete graphical user interface written in Python to demonstrate the flexibility of the novel dynamic clamp implementation: The current user interface focuses on data consistency (between the interface and the dynamic clamp system) and data transparency (with the option of monitoring any values live). Furthermore, a lab journal will keep track of new experiments and write all relevant settings with corresponding timestamps.
 
-You can watch a short **[video recording](https://github.com/christianrickert/pyClamp/blob/master/media/pyClamp.mkv)** (6.5 MiB, [H.264/MPEG-4 AVC](https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC)) that demonstrates the use of **[dyClamp](https://github.com/christianrickert/dyClamp)** and **[pyClamp](https://github.com/christianrickert/pyClamp)** to provide a current command for the Axopatch 200B amplifier.
+You can watch a short **[video recording](https://github.com/christianrickert/pyClamp/blob/master/media/pyClamp.mkv?raw=true)** (6.5 MiB, [H.264/MPEG-4 AVC](https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC)) that demonstrates the use of **[dyClamp](https://github.com/christianrickert/dyClamp)** and **[pyClamp](https://github.com/christianrickert/pyClamp)** to provide a current command for the Axopatch 200B amplifier.
 
 **_Cross-reference_:** **[dyClamp](https://github.com/christianrickert/dyClamp)** is a further development of the [dynamic_clamp](https://github.com/nsdesai/dynamic_clamp) sketch with a focus on a robust serial communication between the Teensy and its controlling host computer.
 
@@ -60,12 +60,16 @@ Experiment stopped:	Mon Apr  1 15:35:11 2019
 
 ## Software requirements
 
-If you want to use **[pyClamp](https://github.com/christianrickert/pyClamp)** in your dynamic clamp setup, you can either downoad the bundled versions for Windows from the [releases page](https://github.com/christianrickert/pyClamp/releases) or run it directly from the source script. In the latter case, you'll need recent versions of [Python](https://www.python.org/downloads/), [NumPy](https://www.scipy.org/scipylib/download.html), [Matplotlib](https://matplotlib.org/users/installing.html), and [PySerial](https://pypi.org/project/pyserial/). Howver, the latest Windows versions of all of these extension packages can be downloaded from [Christoph Gohlke's repository](https://www.lfd.uci.edu/~gohlke/pythonlibs/). These are my version recommendations:
+If you want to use **[pyClamp](https://github.com/christianrickert/pyClamp)** in your dynamic clamp setup, you can either download the bundled versions for Windows from the [releases page](https://github.com/christianrickert/pyClamp/releases) or run it directly from the source script. In the latter case, you'll need recent versions of [Python](https://www.python.org/downloads/), [NumPy](https://www.scipy.org/scipylib/download.html), [Matplotlib](https://matplotlib.org/users/installing.html), and [PySerial](https://pypi.org/project/pyserial/). However, the latest Windows versions of all of these extension packages can be downloaded from [Christoph Gohlke's repository](https://www.lfd.uci.edu/~gohlke/pythonlibs/). These are my version recommendations:
 
 - Python      (>= 3.7.3)
 - NumPy       (>= 1.16.2)
 - Matplotlib  (>= 3.0.3)
 - PySerial    (>= 3.4.0)
+
+## Acknowledgements
+
+I would like to thank Dr. Alexander Polster and Andrew Scallon (@OptogeneticsandNeuralEngineeringCore) for constructive feedback and valuable feature suggestions during the development phase.
 
 ## Development & Bug reports
 
