@@ -3,6 +3,8 @@
 
 **[pyClamp](https://github.com/christianrickert/pyClamp)** is a feature-complete graphical user interface written in Python to demonstrate the flexibility of the novel dynamic clamp implementation: The current user interface focuses on data consistency (between the interface and the dynamic clamp system) and data transparency (with the option of monitoring any values live). Furthermore, a lab journal will keep track of new experiments and write all relevant settings with corresponding timestamps.
 
+You can watch a short **[video recording](https://github.com/christianrickert/pyClamp/blob/master/media/pyClamp.mkv)** (6.5 MiB, [H.264/MPEG-4 AVC](https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC)) that demonstrates the use of **[dyClamp](https://github.com/christianrickert/dyClamp)** and **[pyClamp](https://github.com/christianrickert/pyClamp)** to provide a current command for the Axopatch 200B amplifier.
+
 **_Cross-reference_:** **[dyClamp](https://github.com/christianrickert/dyClamp)** is a further development of the [dynamic_clamp](https://github.com/nsdesai/dynamic_clamp) sketch with a focus on a robust serial communication between the Teensy and its controlling host computer.
 
 ![Screenshot](https://github.com/christianrickert/pyClamp/blob/master/media/pyClamp.png)
@@ -17,27 +19,43 @@ The live reports feature allows users to monitor any values on the Teensy live. 
 
 ## Lab journal
 
-Every time an experiment is started (Start button), a new lab journal entry is created. The new entry contains the start time, the present conductance values, and the calibration parameters. Once the experiment is stopped (Stop button), the entry is finalized with a corresponding timestamp.
+Every time an experiment is started or modified (Start button), a new lab journal entry is created. The new entry contains the start time, the present conductance values, and the calibration parameters. Once the experiment is stopped (Stop button), the entry is finalized with a corresponding timestamp.
 
 Example:
 ```
-Experiment started:	Sun Mar 31 19:04:24 2019
-G_Shunt	[nS]    	     1.00
-G_H 	[nS]       	     0.00
+Experiment started:	Mon Apr  1 15:34:50 2019
+G_Shunt	[nS]    	     0.00
+G_H 	[nS]       	    20.00
 G_Na	[nS]       	     0.00
 OU1_m	[nS]      	     0.00
 OU1_D	[nS^2/ms] 	     0.00
 OU2_m	[nS]      	     0.00
 OU2_D	[nS^2/ms] 	     0.00
 G_EPSC	[nS]     	     0.00
-AMP_i	[mV/mV]   	    50.00
-AMP_o	[pA/V]    	   400.00
-ADC_m	[mV/1]    	     5.50
-ADC_n	[mV]      	-11500.00
-DAC_m	[1/pA]    	   750.00
-DAC_n	[0-4095]  	  2000.00
+AMP_i	[mV/mV]   	   100.00
+AMP_o	[pA/V]    	  2000.00
+ADC_m	[mV/1]    	     5.61
+ADC_n	[mV]      	-12096.07
+DAC_m	[1/pA]    	 33064.41
+DAC_n	[0-4095]  	  1854.43
 VLT_d	[mV]      	     0.00
-Experiment stopped:	Sun Mar 31 19:07:01 2019
+Experiment started:	Mon Apr  1 15:35:05 2019
+G_Shunt	[nS]    	     0.00
+G_H 	[nS]       	    10.00
+G_Na	[nS]       	     0.00
+OU1_m	[nS]      	     0.00
+OU1_D	[nS^2/ms] 	     0.00
+OU2_m	[nS]      	     0.00
+OU2_D	[nS^2/ms] 	     0.00
+G_EPSC	[nS]     	     0.00
+AMP_i	[mV/mV]   	   100.00
+AMP_o	[pA/V]    	  2000.00
+ADC_m	[mV/1]    	     5.61
+ADC_n	[mV]      	-12096.07
+DAC_m	[1/pA]    	 33064.41
+DAC_n	[0-4095]  	  1854.43
+VLT_d	[mV]      	     0.00
+Experiment stopped:	Mon Apr  1 15:35:11 2019
 ```
 
 ## Software requirements
