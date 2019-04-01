@@ -671,13 +671,13 @@ class PYCLAMP():
         self.con2entry = MyNumEntry(self.conframe, state="readonly")
         self.con2entry.grid(column=2, row=1, columnspan=5, sticky='new', padx=(5, 0))
 
-        # Conductance 2 label
+        # Conductance 3 label
         self.con3label = ttk.Label(self.conframe, text="G_Na\t[nS]")
         self.con3label.grid(column=0, row=2, sticky='nw')
         self.con3label.bind('<Enter>', lambda s: ROOT.after(0, toggle_tooltip(TOOLTIPS[10])))
         self.con3label.bind('<Leave>', lambda s: ROOT.after(0, toggle_tooltip("")))
 
-        # Conductance 2 text entry
+        # Conductance 3 text entry
         self.con3entry = MyNumEntry(self.conframe, state="readonly")
         self.con3entry.grid(column=2, row=2, columnspan=5, sticky='new', padx=(5, 0))
 
