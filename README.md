@@ -3,7 +3,7 @@
 
 **[pyClamp](https://github.com/christianrickert/pyClamp)** is a feature-complete graphical user interface written in Python to demonstrate the flexibility of the novel dynamic clamp implementation: The current user interface focuses on data consistency (between the interface and the dynamic clamp system) and data transparency (with the option of monitoring any values live). Furthermore, a lab journal will keep track of new experiments and write all relevant settings with corresponding timestamps.
 
-**[dyClamp](https://github.com/christianrickert/dyClamp)** is a further development of the [dynamic_clamp](https://github.com/nsdesai/dynamic_clamp) sketch with a focus on a robust serial communication between the Teensy and its controlling host computer.
+_Cross-reference_: **[dyClamp](https://github.com/christianrickert/dyClamp)** is a further development of the [dynamic_clamp](https://github.com/nsdesai/dynamic_clamp) sketch with a focus on a robust serial communication between the Teensy and its controlling host computer.
 
 ![Screenshot](https://github.com/christianrickert/pyClamp/blob/master/media/pyClamp.png)
 
@@ -39,3 +39,18 @@ DAC_n	[0-4095]  	  2000.00
 VLT_d	[mV]      	     0.00
 Experiment stopped:	Sun Mar 31 19:07:01 2019
 ```
+
+## Software requirements
+
+If you want to use **pyClamp** in your dynamic clamp setup, you can either downoad the bundled versions for Windows from the [releases page](https://github.com/christianrickert/pyClamp/releases) or run directly from the source script. In the latter case, you'll need recent versions of [Python](https://www.python.org/downloads/), [NumPy](https://www.scipy.org/scipylib/download.html), [Matplotlib](https://matplotlib.org/users/installing.html), and [PySerial](https://pypi.org/project/pyserial/). Howver, the latest Windows versions of these extension packages can be downloaded from [Christoph Gohlke's repository](https://www.lfd.uci.edu/~gohlke/pythonlibs/). These are my version recommendations:
+
+- Python      (>= 1.8.8)
+- NumPy       (>= 1.4.5)
+- Matplotlib  (>= 1.8.8)
+- PySerial    (>= 1.4.5)
+
+## Development & Bug Reports
+
+If you would like to participate in the development, please [fork this repository](https://help.github.com/articles/fork-a-repo) to your GitHub account. In order to report a problem, please create a [new issue](https://help.github.com/articles/creating-an-issue/) in this repository.
+
+Your feedback is welcome! Please contact me at [GitHub](https://github.com/christianrickert/) or via [e-mail](mailto:mail@crickert.de).
