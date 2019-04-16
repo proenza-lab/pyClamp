@@ -3,7 +3,7 @@
 
 **[pyClamp](https://github.com/christianrickert/pyClamp)** is a feature-complete graphical user interface written in Python to demonstrate the flexibility of the novel dynamic clamp implementation: The current user interface focuses on data consistency (between the interface and the dynamic clamp system) and data transparency (with the option of monitoring any values live). Furthermore, a lab journal will keep track of new experiments and record all relevant settings with corresponding timestamps.
 
-You can watch a short **[video recording](https://github.com/christianrickert/pyClamp/blob/master/media/pyClamp.mkv?raw=true)** (6.5 MiB, [H.264/MPEG-4 AVC](https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC)) that demonstrates the use of **[dyClamp](https://github.com/christianrickert/dyClamp)** and **[pyClamp](https://github.com/christianrickert/pyClamp)** to produce and monitor a current command for the Axopatch 200B amplifier.
+**[Video demonstration](https://github.com/christianrickert/pyClamp/blob/master/media/pyClamp.mkv?raw=true)** (6.5 MiB, [H.264/MPEG-4 AVC](https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC)) of **[dyClamp](https://github.com/christianrickert/dyClamp)** and **[pyClamp](https://github.com/christianrickert/pyClamp)** to produce and monitor a current command for the Axopatch 200B amplifier.
 
 **_Cross-reference_:** **[dyClamp](https://github.com/christianrickert/dyClamp)** is a further development of the [dynamic_clamp](https://github.com/nsdesai/dynamic_clamp) sketch with a focus on a robust serial communication between the Teensy and its controlling host computer.
 
