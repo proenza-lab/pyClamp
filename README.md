@@ -1,6 +1,8 @@
 # pyClamp
 ## A live graphical user interface for the [dyClamp](https://github.com/christianrickert/dyClamp) sketch
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2825278.svg)](https://doi.org/10.5281/zenodo.2825278)
+
 **[pyClamp](https://github.com/christianrickert/pyClamp)** is a feature-complete graphical user interface written in Python to demonstrate the flexibility of the novel dynamic clamp implementation: The current user interface focuses on data consistency (between the interface and the dynamic clamp system) and data transparency (with the option of monitoring any values live). Furthermore, a lab journal will keep track of new experiments and record all relevant settings with corresponding timestamps.
 
 **[Video demonstration](https://github.com/christianrickert/pyClamp/blob/master/media/pyClamp.mkv?raw=true)** (6.5 MiB, [H.264/MPEG-4 AVC](https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC)) of **[dyClamp](https://github.com/christianrickert/dyClamp)** and **[pyClamp](https://github.com/christianrickert/pyClamp)** to produce and monitor a current command for the Axopatch 200B amplifier.
