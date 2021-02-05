@@ -71,7 +71,7 @@ If you want to use **[pyClamp](https://github.com/christianrickert/pyClamp)** in
 
 ## Acknowledgements
 
-I would like to thank [Cathy Proenza](http://www.ucdenver.edu/academics/colleges/medicalschool/departments/physiology/faculty/Pages/Proenza.aspx), [Alexander Polster](https://www.linkedin.com/in/alexanderpolster/), and [Andrew Scallon](https://optogeneticsandneuralengineeringcore.gitlab.io/ONECoreSite/) for providing resources and valuable feedback during the development process.
+I would like to thank [Cathy Proenza](https://medschool.cuanschutz.edu/physiology/faculty/cathy-proenza-phd), [Alexander Polster](https://www.linkedin.com/in/alexanderpolster/), and [Andrew Scallon](https://optogeneticsandneuralengineeringcore.gitlab.io/ONECoreSite/) for providing resources and valuable feedback during the development process.
 
 ## Development & Bug reports
 
