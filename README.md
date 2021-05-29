@@ -25,39 +25,39 @@ Every time an experiment is started or modified (Start button), a new lab journa
 
 Example:
 ```
-Experiment started:	Mon Apr  1 15:34:50 2019
+Experiment started:	Sat May 29 11:49:26 2021
 G_Shunt	[nS]    	     0.00
-G_H 	[nS]       	    20.00
+G_H 	[nS]       	     0.00
 G_Na	[nS]       	     0.00
 OU1_m	[nS]      	     0.00
 OU1_D	[nS^2/ms] 	     0.00
 OU2_m	[nS]      	     0.00
 OU2_D	[nS^2/ms] 	     0.00
 G_EPSC	[nS]     	     0.00
-AMP_i	[mV/mV]   	   100.00
-AMP_o	[pA/V]    	  2000.00
-ADC_m	[mV/1]    	     5.61
-ADC_n	[mV]      	-12096.07
-DAC_m	[1/pA]    	 33064.41
-DAC_n	[0-4095]  	  1854.43
+AMP_i	[mV/mV]   	    50.00
+AMP_o	[pA/V]    	   400.00
+ADC_m	[mV/1]    	     5.50
+ADC_n	[mV]      	-11500.00
+DAC_m	[1/pA]    	   750.00
+DAC_n	[0-4095]  	  2000.00
 VLT_d	[mV]      	     0.00
-Experiment started:	Mon Apr  1 15:35:05 2019
-G_Shunt	[nS]    	     0.00
-G_H 	[nS]       	    10.00
+Experiment started:	Sat May 29 12:00:54 2021
+G_Shunt	[nS]    	     2.00
+G_H 	[nS]       	     0.00
 G_Na	[nS]       	     0.00
 OU1_m	[nS]      	     0.00
 OU1_D	[nS^2/ms] 	     0.00
 OU2_m	[nS]      	     0.00
 OU2_D	[nS^2/ms] 	     0.00
 G_EPSC	[nS]     	     0.00
-AMP_i	[mV/mV]   	   100.00
-AMP_o	[pA/V]    	  2000.00
-ADC_m	[mV/1]    	     5.61
-ADC_n	[mV]      	-12096.07
-DAC_m	[1/pA]    	 33064.41
-DAC_n	[0-4095]  	  1854.43
+AMP_i	[mV/mV]   	    50.00
+AMP_o	[pA/V]    	   400.00
+ADC_m	[mV/1]    	     5.50
+ADC_n	[mV]      	-11500.00
+DAC_m	[1/pA]    	   750.00
+DAC_n	[0-4095]  	  2000.00
 VLT_d	[mV]      	     0.00
-Experiment stopped:	Mon Apr  1 15:35:11 2019
+Experiment stopped:	Sat May 29 12:04:29 2021
 ```
 
 ## Software requirements
