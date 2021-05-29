@@ -978,7 +978,7 @@ ROOT.rowconfigure(0, weight=1)
 ROOT.title("pyClamp 1.0 (GUI for dyClamp)")
 
 # 0.1 Footer
-AUTHOR = tk.Label(ROOT, text="© Christian Rickert <mail@crickert.de>")
+AUTHOR = tk.Label(ROOT, text="© Christian Rickert <rc.email@icloud.com>")
 AUTHOR.grid(column=0, row=1, sticky=('e', 'w'))
 RESIZER = ttk.Sizegrip(ROOT)
 RESIZER.grid(column=0, row=1, sticky=('s', 'e'))
