@@ -1,5 +1,5 @@
 # pyClamp
-## A live graphical user interface for the [dyClamp](https://github.com/christianrickert/dyClamp) sketch
+## A live graphical user interface (client) for the [dyClamp](https://github.com/christianrickert/dyClamp) (host) controller
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2825278.svg)](https://doi.org/10.5281/zenodo.2825278)
 
